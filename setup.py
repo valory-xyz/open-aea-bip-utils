@@ -103,7 +103,7 @@ version = load_version("bip_utils", "_version.py")
 
 # Setup configuration
 setuptools.setup(
-    name="bip_utils",
+    name="open-aea-bip-utils",
     version=version,
     author="Emanuele Bellocchia",
     author_email="ebellocchia@gmail.com",
@@ -127,7 +127,7 @@ setuptools.setup(
         ],
         "develop": load_requirements("requirements-dev.txt"),
     },
-    packages=setuptools.find_packages(exclude=["*tests*"]),
+    packages=setuptools.find_packages(include=["bip_utils*"],exclude=["*tests*"]),
     package_data={
         "bip_utils": [
             # BIP39
